@@ -1,6 +1,6 @@
 ---
 title: Adobe Consulting Services Overview
-description: This repository documents solutions that have been created by ACS for use with AEM
+description: This repository documents solutions that have been created by ACS for use with AEM.
 ---
 
 # Overview {#overview}
