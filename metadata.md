@@ -1,18 +1,14 @@
 ---
-product: Adobe Experience Manager
-git-repo: https://github.com/AdobeDocs/experience-manager-htl.en
+product: adobe experience manager
+solution: Experience Manager
+type: Documentation
+git-repo: https://github.com/AdobeDocs/adobe-consulting-services.en
 index: y
-solution-title: Adobe Consulting Services
-solution-hub-url: https://docs.adobe.com/content/help/en/experience-manager-cloud-service/sites/home.html
-getting-started-title: Adobe Consulting Services
-getting-started-url: https://docs.adobe.com/content/help/en/experience-manager-cloud-service/core-concepts/home.html
-tutorials-title: AEM Tutorials
-tutorials-url: https://docs.adobe.com/content/help/en/experience-manager-learn/cloud-service/overview.html
 ---
 
 # Metadata for internal use
 
-Metadata in the GitHub authoring system is hierarchal and is defined the the following increasing levels of precedent.
+Metadata in the GitHub authoring system is hierarchical and is defined the the following increasing levels of precedent.
 
 1. metadata.md
 1. ToC
@@ -20,19 +16,11 @@ Metadata in the GitHub authoring system is hierarchal and is defined the the fol
 
 Metadata defined in the metadata.md file apply to the entire repo, but can be overridden at the ToC and article levels. Any overriding of the metadata should be done at the lowest level possible.
 
-The metadata in the experience-manager-core-components.en repo is the minimum required.
-
 metadata.md
 
 * `product`
 * `git-repo`
 * `index: y`
-* `solution-title`
-* `solution-hub-url`
-* `getting-started-title`
-* `getting-started-url`
-* `tutorials-title`
-* `tutorials-url`
 
 ToCs
 
@@ -44,4 +32,4 @@ Article
 * `title`
 * `description`
 
-Additional information about the metadata can be found in the [internal authoring guide.](https://docs.adobe.com/help/en/collaborative-doc-instructions/collaboration-guide/markdown/metadata.html#solution-metadata)
+Additional information about the metadata can be found in the [internal authoring guide](https://experienceleague.adobe.com/docs/authoring-guide-exl/using/authoring/metadata.html).
