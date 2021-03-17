@@ -1,6 +1,7 @@
 ---
 product: adobe experience manager
 solution: Experience Manager
+description: Consulting Experience Manager Documentation 
 type: Documentation
 git-repo: https://github.com/AdobeDocs/adobe-consulting-services.en
 index: y
