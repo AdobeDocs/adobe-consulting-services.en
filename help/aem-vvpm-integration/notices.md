@@ -1,6 +1,6 @@
 ---
-title: Get Started with the Veeva Vault integration
-description: Learn how to Get Started with the Veeva Vault integration
+title: Veeva Vault Integration Notices
+description: Veeva Vault Integration Notices
 ---
 
 # Best practices, Guardrails, and Notices

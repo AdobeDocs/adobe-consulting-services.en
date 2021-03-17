@@ -1,6 +1,6 @@
 ---
-title: Get Started with the Veeva Vault integration
-description: Learn how to Get Started with the Veeva Vault integration
+title: Veeva Vault Integration Overview
+description: Veeva Vault Integration Overview
 ---
 
 # Get Started with Veeva Vault PromoMats and Adobe Experience Manager integration

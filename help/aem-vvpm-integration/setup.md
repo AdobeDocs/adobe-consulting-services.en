@@ -1,6 +1,6 @@
 ---
-title: Get Started with the Veeva Vault integration
-description: Learn how to Get Started with the Veeva Vault integration
+title: Veeva Vault Integration Setup
+description: Veeva Vault Integration Setup
 ---
 
 # Integration Setup
