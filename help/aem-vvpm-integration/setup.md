@@ -95,9 +95,9 @@ Fill out the following in the configuration tab:
 
 [Configuration Tab](assetsonfiguration-tab.png)
 
-1. Required. Title for Veeva Vault connector configuration. This can be an arbitrary value. (e.g. "Veeva Vault Configuration")
-2. Required. The domain url of the Veeva instance (e.g. "https://vvtechpartner-adobe-promomats.veevavault.com/")
-3. Required. ClientID required to call Veeva Vault API. This can be an arbitrary value and is mostly used for debugging. (e.g. adobe-aem-vvtechpartner)
+1. Required. Title for Veeva Vault connector configuration. This can be an arbitrary value. (e.g. `Veeva Vault Configuration`)
+2. Required. The domain url of the Veeva instance (e.g. `https://vvtechpartner-adobe-promomats.veevavault.com/`)
+3. Required. ClientID required to call Veeva Vault API. This can be an arbitrary value and is mostly used for debugging. (e.g. `adobe-aem-vvtechpartner`)
 4. Required. Veeva Vault username. See [Veeva User Creation](#veeva-user-creation).
 5. Required. Veeva Vault password. See [Veeva User Creation](#veeva-user-creation).
 
@@ -107,17 +107,17 @@ If the project needs to generate PDFs or images for pages, this tab is required.
 
 [Adobe IO Tab](assetsdobe-io-tab.png)
 
-1. Required. The Adobe IO endpoint for creating PDF Images. (e.g. "https://<id>.adobeioruntime.net/api/v1/web/aem-veeva-serverless-0.0.2/trigger-action.json")
-2. Required. The action name for page image generation. This value must be "aem-veeva-serverless-0.0.2/get-image-async".
-3. Required. The action name for html image generation. This value must be "aem-veeva-serverless-0.0.2/get-pdf-async".
-4. Required. The Adobe IO endpoint to get the state of the generation.(e.g. "https://<id>.adobeioruntime.net/api/v1/web/aem-veeva-serverless-0.0.2/get-state-value")
+1. Required. The Adobe IO endpoint for creating PDF Images. (e.g. `https://ID_GOES_HERE.adobeioruntime.net/api/v1/web/aem-veeva-serverless-0.0.2/trigger-action.json`)
+2. Required. The action name for page image generation. This value must be `aem-veeva-serverless-0.0.2/get-image-async`.
+3. Required. The action name for html image generation. This value must be `aem-veeva-serverless-0.0.2/get-pdf-async`.
+4. Required. The Adobe IO endpoint to get the state of the generation.(e.g. `https://ID_GOES_HERE.adobeioruntime.net/api/v1/web/aem-veeva-serverless-0.0.2/get-state-value`)
 5. Required. AEM username to be used by Adobe IO. See [AEM User Creation](#aem-user-creation).
 6. Required. AEM password to be used by Adobe IO. See [AEM User Creation](#aem-user-creation).
-7. Optional. Default timeout is to let the page respond until a specified time after which AIO service stops trying to get a response. Default value is 30000.
-8. Optional. Delay is after page has responded with 200 to delay for all the images to render before taking a screenshot. Default value is 2000.
+7. Optional. Default timeout is to let the page respond until a specified time after which AIO service stops trying to get a response. Default value is `30000`.
+8. Optional. Delay is after page has responded with 200 to delay for all the images to render before taking a screenshot. Default value is `2000`.
 9. Optional. Screenshot/PDF generated URL will be expired after configured value in seconds.
-10. Optional. Adobe IO screenshot/PDF generation service is async. AEM service calls AIO status endpoint to get screenshot/PDF. This property will decide in milliseconds the pause between in each status call. Default value is 10000.
-11. Optional. Maximum retry count for status call to Adobe IO for getting screenshot/PDF. Default value is 10.
+10. Optional. Adobe IO screenshot/PDF generation service is async. AEM service calls AIO status endpoint to get screenshot/PDF. This property will decide in milliseconds the pause between in each status call. Default value is `10000`.
+11. Optional. Maximum retry count for status call to Adobe IO for getting screenshot/PDF. Default value is `10`.
 
 ### Advanced Tab
 
@@ -125,17 +125,17 @@ Fill out the following in the advanced tab:
 
 [Advanced Tab](assetsdvanced-tab.png)
 
-1. Required for PDF/image generation. The filename pattern used when creating PDFs/images. `{name}` can be templated. (e.g. "{name}-screenshot")
-2. Required for PDF/image generation. The device types for which page screenshots are required. Valid types include "Desktop", "Tab (iPad)", and "Mobile (iPhone X)".
-3. Required for PDF/image generation. Screenshot type to create. Either "PDF" or "Image".
-4. Required for PDF/image generation. The PDF type to generate. Either "Print CSS Based PDF" or "Pixel Perfect Screenshot PDF".
-5. Required for PDF/image generation. The Image type to generate. Either "PNG" or "JPEG".
+1. Required for PDF/image generation. The filename pattern used when creating PDFs/images. `{name}` can be templated. (e.g. `{name}-screenshot`)
+2. Required for PDF/image generation. The device types for which page screenshots are required. Valid types include `Desktop`, `Tab (iPad)`, and `Mobile (iPhone X)`.
+3. Required for PDF/image generation. Screenshot type to create. Either `PDF` or `Image`.
+4. Required for PDF/image generation. The PDF type to generate. Either `Print CSS Based PDF` or `Pixel Perfect Screenshot PDF`.
+5. Required for PDF/image generation. The Image type to generate. Either `PNG` or `JPEG`.
 6. Required. Workflow to run once Veeva Vault Approval trigger has come through.
 7. Required. Workflow to run once Veeva Vault Reject trigger has come through.
-8. Optional. Property name for Document Id in Veeva Vault. Default value is "id".
-9. Optional. Property name for Status in Veeva Vault. Default value is "status__v".
-10. Optional. Property name for Document Modified Date. Default value is "version_modified_date__v".
-11. Optional. Property name for document resource url. Default value will be "external_id__v". If this field is already used, then create different field in Veeva and populate field name here.
+8. Optional. Property name for Document Id in Veeva Vault. Default value is `id`.
+9. Optional. Property name for Status in Veeva Vault. Default value is `status__v`.
+10. Optional. Property name for Document Modified Date. Default value is `version_modified_date__v`.
+11. Optional. Property name for document resource url. Default value will be `external_id__v`. If this field is already used, then create different field in Veeva and populate field name here.
 
 ### Page Tab
 
@@ -146,12 +146,12 @@ If syncing pages, fill out the following in the page tab:
 1. Required. Map a property from AEM to Veeva.
     a. AEM property name. Selectable from AEM properties. 
     b. Veeva property name. Select a page tab. 
-    c. Property type. Either "Text" or "Multiline Text".
+    c. Property type. Either `Text` or `Multiline Text`.
 
-2. Required. Map a property from Veeva to AEM. **NOTE! The mapping of "status__v" to "veeva-status" must exist.**
+2. Required. Map a property from Veeva to AEM. **NOTE! The mapping of `status__v` to `veeva-status` must exist.**
     a. Veeva property name. Select a page tab.
     b. AEM property name. Selectable from AEM properties. 
-    c. Property type. Either "Text" or "Multiline Text".
+    c. Property type. Either `Text` or `Multiline Text`.
     
 
 ### Asset Tab
@@ -163,12 +163,12 @@ If syncing assets, fill out the following in the asset tab:
 1. Required. Map a property from AEM to Veeva.
     a. AEM property name. Selectable from AEM properties. 
     b. Veeva property name. Select a page tab. 
-    c. Property type. Either "Text" or "Multiline Text".
+    c. Property type. Either `Text` or `Multiline Text`.
 
-2. Required. Map a property from Veeva to AEM. **NOTE! The mapping of "status__v" to "veeva-status" must exist.**
+2. Required. Map a property from Veeva to AEM. **NOTE! The mapping of `status__v` to `veeva-status` must exist.**
     a. Veeva property name. Select a page tab.
     b. AEM property name. Selectable from AEM properties. 
-    c. Property type. Either "Text" or "Multiline Text".
+    c. Property type. Either `Text` or `Multiline Text`.
 
 ## Additional Setup
 
