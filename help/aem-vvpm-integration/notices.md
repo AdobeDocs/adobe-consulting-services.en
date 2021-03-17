@@ -40,7 +40,7 @@ Consider the following AEM limitations when using this integration:
 
 You can monitor your instance limits by navigating to the VVPM general settings.
 
-[Veeva Limits](assetseeva-limits.png)
+[Veeva Limits](assets/veeva-limits.png)
 
 ## Adobe Experience Manager Limitations
 
