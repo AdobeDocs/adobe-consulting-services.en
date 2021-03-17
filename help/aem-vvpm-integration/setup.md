@@ -32,54 +32,54 @@ To include the connector in your pom, follow these steps:
 
 1. Add the followings to the `~/.m2/settings.xml` replacing `YOUR_USERNAME` with the username provided and `YOUR_PASSWORD` with the the password provided:
 
-```
-<settings>
-...
-    <servers>
+    ```
+    <settings>
     ...
-        <server>
-            <id>repo.ea.adobe.net</id>
-            <username>YOUR_USERNAME</username>
-            <password>YOUR_PASSWORD</password>
-            <filePermissions>BucketOwnerFullControl</filePermissions>
-            <configuration>
-              <wagonProvider>s3</wagonProvider>
-            </configuration>
-        </server>
+        <servers>
+        ...
+            <server>
+                <id>repo.ea.adobe.net</id>
+                <username>YOUR_USERNAME</username>
+                <password>YOUR_PASSWORD</password>
+                <filePermissions>BucketOwnerFullControl</filePermissions>
+                <configuration>
+                  <wagonProvider>s3</wagonProvider>
+                </configuration>
+            </server>
+        ...
+        </servers>
     ...
-    </servers>
-...
-</settings>
-```
+    </settings>
+    ```
 
 2. Add the following to the projects `pom.xml` file:
 
-```
-<build>
-...
-    <extensions>
-        ...
-        <extension>
-            <groupId>com.allogy.maven.wagon</groupId>
-            <artifactId>maven-s3-wagon</artifactId>
-            <version>1.2.0</version>
-        </extension>
-        ...
-    </extensions>
-...
-</build>
-...
-<distributionManagement>
-    <repository>
-        <id>repo.ea.adobe.net</id>
-        <url>s3://repo.ea.adobe.net/release</url>
-        <releases>
-            <enabled>true</enabled>
-        </releases>
-    </repository>
-</distributionManagement>
-...
-```
+    ```
+    <build>
+    ...
+        <extensions>
+            ...
+            <extension>
+                <groupId>com.allogy.maven.wagon</groupId>
+                <artifactId>maven-s3-wagon</artifactId>
+                <version>1.2.0</version>
+            </extension>
+            ...
+        </extensions>
+    ...
+    </build>
+    ...
+    <distributionManagement>
+        <repository>
+            <id>repo.ea.adobe.net</id>
+            <url>s3://repo.ea.adobe.net/release</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+        </repository>
+    </distributionManagement>
+    ...
+    ```
 
 ## Populate Cloud Configuration
 
