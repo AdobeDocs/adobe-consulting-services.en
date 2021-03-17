@@ -7,4 +7,4 @@ description: Learn how to Get Started with the Veeva Vault integration
 
 After the configuring the integration, the following video walk-through describes using the connector:
 
-[!VIDEO](https://video.tv.adobe.com/v/27637) 
+[VIDEO](https://video.tv.adobe.com/v/27637)

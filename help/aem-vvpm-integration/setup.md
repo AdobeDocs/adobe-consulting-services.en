@@ -30,8 +30,8 @@ https://experienceleague.adobe.com/docs/experience-manager-64/administering/cont
 
 To include the connector in your pom, follow these steps:
 
-1. Add the followings to the `~/.m2/settings.xml` replacing `YOUR_USERNAME` with the username provided and `YOUR_PASSWORD`
-with the the password provided:
+1. Add the followings to the `~/.m2/settings.xml` replacing `YOUR_USERNAME` with the username provided and `YOUR_PASSWORD` with the the password provided:
+
 ```
 <settings>
 ...
@@ -85,15 +85,15 @@ with the the password provided:
 
 Navigate to the cloud configuration and populate the configuration tabs.
 
-[!Navigate to Cloud Configuration](assetsloud-config-navigation.png)]
+[Navigate to Cloud Configuration](assetsloud-config-navigation.png)
 
-[!Navigate to Veeva Configuration](assetseeva-config-navigation.png)]
+[Navigate to Veeva Configuration](assetseeva-config-navigation.png)
 
 ### Configuration Tab
 
 Fill out the following in the configuration tab:
 
-[Configuration Tab](assetsonfiguration-tab.png)]
+[Configuration Tab](assetsonfiguration-tab.png)
 
 1. Required. Title for Veeva Vault connector configuration. This can be an arbitrary value. (e.g. "Veeva Vault Configuration")
 2. Required. The domain url of the Veeva instance (e.g. "https://vvtechpartner-adobe-promomats.veevavault.com/")
@@ -105,7 +105,7 @@ Fill out the following in the configuration tab:
 
 If the project needs to generate PDFs or images for pages, this tab is required. Fill out the following in the adobe io tab:
 
-[Adobe IO Tab](assetsdobe-io-tab.png)]
+[Adobe IO Tab](assetsdobe-io-tab.png)
 
 1. Required. The Adobe IO endpoint for creating PDF Images. (e.g. "https://<id>.adobeioruntime.net/api/v1/web/aem-veeva-serverless-0.0.2/trigger-action.json")
 2. Required. The action name for page image generation. This value must be "aem-veeva-serverless-0.0.2/get-image-async".
@@ -123,7 +123,7 @@ If the project needs to generate PDFs or images for pages, this tab is required.
 
 Fill out the following in the advanced tab:
 
-[Advanced Tab](assetsdvanced-tab.png)]
+[Advanced Tab](assetsdvanced-tab.png)
 
 1. Required for PDF/image generation. The filename pattern used when creating PDFs/images. `{name}` can be templated. (e.g. "{name}-screenshot")
 2. Required for PDF/image generation. The device types for which page screenshots are required. Valid types include "Desktop", "Tab (iPad)", and "Mobile (iPhone X)".
@@ -141,7 +141,7 @@ Fill out the following in the advanced tab:
 
 If syncing pages, fill out the following in the page tab:
 
-[Page Tab](assetsage-tab.png)]
+[Page Tab](assetsage-tab.png)
 
 1. Required. Map a property from AEM to Veeva.
     a. AEM property name. Selectable from AEM properties. 
@@ -158,7 +158,7 @@ If syncing pages, fill out the following in the page tab:
 
 If syncing assets, fill out the following in the asset tab:
 
-[Asset Tab](assetssset-tab.png)]
+[Asset Tab](assetssset-tab.png)
 
 1. Required. Map a property from AEM to Veeva.
     a. AEM property name. Selectable from AEM properties. 
