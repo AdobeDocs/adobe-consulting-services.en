@@ -1,9 +1,17 @@
 ---
-title: Veeva Vault Integration Setup
-description: Veeva Vault Integration Setup
+title: Veeva Vault Integration Usage
+description: Veeva Vault Integration Usage
 ---
 
-# Integration Setup
+# Integration Usage
+
+## Walkthrough
+
+The following video walk-through describes using the connector:
+
+![](https://video.tv.adobe.com/v/332137/?quality=12&learn=on)
+
+## Setup
 
 This guide will walk you through getting the connector up and running.
 
@@ -14,23 +22,23 @@ This guide will walk you through getting the connector up and running.
 >Steps in this documentation will guide you through creating integrations/registrations that involve assigning permissions and/or admin access.  It is your responsibility to ensure these steps comply with your company policies before performing, and to perform them carefully.
 >
 
-## Install Integration Package
+### Install Integration Package
 
-You will receive access the integration AEM package. There are two  options to install the connector: 
+You will receive access to the integration AEM package. There are two options to install the integration: 
 
-1. **Package Installation** - Straight forward and less involved. (Recommended)
-2. **POM Installation** - More advanced, but can be useful when using CICD and upgrading the connector.
+1. **Package Installation** - Straight forward and less involved.
+2. **POM Installation** - More advanced, but can be useful when using CICD and upgrading the integration.
 
-### Package Installation
+#### Package Installation
 
 To install the package, download it with the link provided. [Detailed instructions for installing an AEM package can be found by clicking here.](
 https://experienceleague.adobe.com/docs/experience-manager-64/administering/contentmanagement/package-manager.html?lang=en#installing-packages) 
 
-### POM Installation
+#### POM Installation
 
-To include the connector in your pom, follow these steps:
+To include the connector in your POM, follow these steps:
 
-1. Add the followings to the `~/.m2/settings.xml` replacing `YOUR_USERNAME` with the username provided and `YOUR_PASSWORD` with the the password provided:
+1. Add the following to the `~/.m2/settings.xml` replacing `YOUR_USERNAME` with the username provided and `YOUR_PASSWORD` with the the password provided:
 
     ```
     <settings>
@@ -56,7 +64,19 @@ To include the connector in your pom, follow these steps:
 
     ```
     <build>
-    ...
+        ...
+        <dependencies>
+            ...
+            <dependency>
+                ...
+                <groupId>com.adobe.acs.aemveeva</groupId>
+                <artifactId>aem-veeva-connector</artifactId>
+                <version>1.0.0</version>
+                ...
+            </dependency>            
+            ...
+        </dependencies>
+        ...
         <extensions>
             ...
             <extension>
@@ -66,7 +86,7 @@ To include the connector in your pom, follow these steps:
             </extension>
             ...
         </extensions>
-    ...
+        ...
     </build>
     ...
     <distributionManagement>
@@ -81,36 +101,40 @@ To include the connector in your pom, follow these steps:
     ...
     ```
 
-## Populate Cloud Configuration
+### Cloud Configuration
 
-Navigate to the cloud configuration and populate the configuration tabs.
+This integration is configured by creating a cloud configuration on folder the connector will be operating on. Follow these steps to create a cloud configuration:
 
-[Navigate to Cloud Configuration](assets/cloud-config-navigation.png)
+1. Navigate to the Veeva cloud configuration.
 
-[Navigate to Veeva Configuration](assets/veeva-config-navigation.png)
+    ![Navigate to Cloud Configuration](assets/cloud-config-navigate.png)
 
-### Configuration Tab
+2. Create a new Veeva cloud configuration on the appropriate folder and populate the as described in the next sections.
+
+    ![Create Cloud Configuration](assets/cloud-config-create.png)
+
+#### Configuration Tab
 
 Fill out the following in the configuration tab:
 
-[Configuration Tab](assets/configuration-tab.png)
+![Configuration Tab](assets/configuration-tab.png)
 
 1. Required. Title for Veeva Vault connector configuration. This can be an arbitrary value. (e.g. `Veeva Vault Configuration`)
-2. Required. The domain url of the Veeva instance (e.g. `https://vvtechpartner-adobe-promomats.veevavault.com/`)
+2. Required. The domain url of the Veeva instance (e.g. `https://my-instance.veevavault.com/`)
 3. Required. ClientID required to call Veeva Vault API. This can be an arbitrary value and is mostly used for debugging. (e.g. `adobe-aem-vvtechpartner`)
 4. Required. Veeva Vault username. See [Veeva User Creation](#veeva-user-creation).
 5. Required. Veeva Vault password. See [Veeva User Creation](#veeva-user-creation).
 
-### Adobe IO Tab
+#### Adobe IO Tab
 
 If the project needs to generate PDFs or images for pages, this tab is required. Fill out the following in the adobe io tab:
 
-[Adobe IO Tab](assets/adobe-io-tab.png)
+![Adobe IO Tab](assets/adobe-io-tab.png)
 
-1. Required. The Adobe IO endpoint for creating PDF Images. (e.g. `https://ID_GOES_HERE.adobeioruntime.net/api/v1/web/aem-veeva-serverless-0.0.2/trigger-action.json`)
+1. Required. The Adobe IO endpoint for creating PDF Images. (e.g. `https://my-namespace.adobeioruntime.net/api/v1/web/aem-veeva-serverless-0.0.2/trigger-action.json`)
 2. Required. The action name for page image generation. This value must be `aem-veeva-serverless-0.0.2/get-image-async`.
 3. Required. The action name for html image generation. This value must be `aem-veeva-serverless-0.0.2/get-pdf-async`.
-4. Required. The Adobe IO endpoint to get the state of the generation.(e.g. `https://ID_GOES_HERE.adobeioruntime.net/api/v1/web/aem-veeva-serverless-0.0.2/get-state-value`)
+4. Required. The Adobe IO endpoint to get the state of the generation.(e.g. `https://my-namespace.adobeioruntime.net/api/v1/web/aem-veeva-serverless-0.0.2/get-state-value`)
 5. Required. AEM username to be used by Adobe IO. See [AEM User Creation](#aem-user-creation).
 6. Required. AEM password to be used by Adobe IO. See [AEM User Creation](#aem-user-creation).
 7. Optional. Default timeout is to let the page respond until a specified time after which AIO service stops trying to get a response. Default value is `30000`.
@@ -119,11 +143,11 @@ If the project needs to generate PDFs or images for pages, this tab is required.
 10. Optional. Adobe IO screenshot/PDF generation service is async. AEM service calls AIO status endpoint to get screenshot/PDF. This property will decide in milliseconds the pause between in each status call. Default value is `10000`.
 11. Optional. Maximum retry count for status call to Adobe IO for getting screenshot/PDF. Default value is `10`.
 
-### Advanced Tab
+#### Advanced Tab
 
 Fill out the following in the advanced tab:
 
-[Advanced Tab](assets/advanced-tab.png)
+![Advanced Tab](assets/advanced-tab.png)
 
 1. Required for PDF/image generation. The filename pattern used when creating PDFs/images. `{name}` can be templated. (e.g. `{name}-screenshot`)
 2. Required for PDF/image generation. The device types for which page screenshots are required. Valid types include `Desktop`, `Tab (iPad)`, and `Mobile (iPhone X)`.
@@ -135,52 +159,76 @@ Fill out the following in the advanced tab:
 8. Optional. Property name for Document Id in Veeva Vault. Default value is `id`.
 9. Optional. Property name for Status in Veeva Vault. Default value is `status__v`.
 10. Optional. Property name for Document Modified Date. Default value is `version_modified_date__v`.
-11. Optional. Property name for document resource url. Default value will be `external_id__v`. If this field is already used, then create different field in Veeva and populate field name here.
+11. Optional. Property name for document resource url. Default value will be `external_id__v`. If this field is already used, then create a different field in Veeva and populate the field name here.
 
-### Page Tab
+#### Page Tab
 
 If syncing pages, fill out the following in the page tab:
 
-[Page Tab](assets/page-tab.png)
+![Page Tab](assets/page-tab.png)
 
 1. Required. Map a property from AEM to Veeva.
-    a. AEM property name. Selectable from AEM properties. 
-    b. Veeva property name. Select a page tab. 
+    a. AEM property name. Selectable from AEM properties. (e.g. `jcr:title`)
+    b. Veeva property name entered exactly at is exists in Veeva. (e.g. `name__v`)  
     c. Property type. Either `Text` or `Multiline Text`.
 
-2. Required. Map a property from Veeva to AEM. **NOTE! The mapping of `status__v` to `veeva-status` must exist.**
-    a. Veeva property name. Select a page tab.
-    b. AEM property name. Selectable from AEM properties. 
+2. Required. Map a property from Veeva to AEM. **NOTE! The mapping of `status__v` to a representative AEM property must exist.**
+    a. Veeva property name entered exactly at is exists in Veeva. (e.g. `name__v`)
+    b. AEM property name. Selectable from AEM properties. (e.g. `jcr:title`)
     c. Property type. Either `Text` or `Multiline Text`.
     
 
-### Asset Tab
+#### Asset Tab
 
 If syncing assets, fill out the following in the asset tab:
 
-[Asset Tab](assets/asset-tab.png)
+![Asset Tab](assets/asset-tab.png)
 
 1. Required. Map a property from AEM to Veeva.
-    a. AEM property name. Selectable from AEM properties. 
-    b. Veeva property name. Select a page tab. 
+    a. AEM property name. Selectable from AEM properties. (e.g. `/jcr:content/metadata/jcr:title`)
+    b. Veeva property name entered exactly at is exists in Veeva. (e.g. `name__v`)
     c. Property type. Either `Text` or `Multiline Text`.
 
-2. Required. Map a property from Veeva to AEM. **NOTE! The mapping of `status__v` to `veeva-status` must exist.**
-    a. Veeva property name. Select a page tab.
-    b. AEM property name. Selectable from AEM properties. 
+2. Required. Map a property from Veeva to AEM. **NOTE! The mapping of `status__v` to a representative AEM property must exist.**
+    a. Veeva property name entered exactly at is exists in Veeva. (e.g. `name__v`)
+    b. AEM property name. Selectable from AEM properties. (e.g. `/jcr:content/metadata/jcr:title`)
     c. Property type. Either `Text` or `Multiline Text`.
 
-## Additional Setup
+### Additional Setup
 
-### AEM User Creation
+#### AEM User Creation
 
-During PDF/Image generation, an AEM user needs to be created in order to get pages from AEM. Create and give permissions to a user by following these links:
+During PDF/Image generation, an AEM user needs to be created in order to get pages from AEM. Create and give read only permissions to a user by following these links:
 
-* [Creating a user in AEM](https://experienceleague.adobe.com/docs/experience-manager-65/forms/administrator-help/setup-organize-users/adding-configuring-users.html?lang=en#create-a-user)
-* [Adding permissions to a user in AEM](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security.html?lang=en#permissions-in-aem)
+If using AEM 6.5.5+:
 
-
-### Veeva User Creation
-
-TODO: ADMIN -> Users and Groups -> Vault Users -> ensure Vault Owners
+    * [Creating a user in AEM](https://experienceleague.adobe.com/docs/experience-manager-65/forms/administrator-help/setup-organize-users/adding-configuring-users.html?lang=en#create-a-user)
+    * [Adding permissions to a user in AEM](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security.html?lang=en#permissions-in-aem)
     
+If using AEM Cloud Services:
+
+    * [Managing Users with AEM Cloud Services](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/accessing/aem-users-groups-and-permissions.html?lang=en#accessing)
+
+>[!IMPORTANT]
+>
+> These actions must be performed as an administrator.
+> You must comply with your organizations security standards when creating users and setting permissions.
+>
+
+#### Veeva User Creation
+
+In order to use this integration, a user needs to be created in Veeva Vault. To create a user, follow these steps:
+
+1. Navigate to Admin -> Users and Groups -> Vault users -> Create
+    
+    ![Navigate to Veeva User](assets/veeva-user-navigate.png)
+
+2. Fill out the required blacks, most importantly, set the `License Type` to `Full User` and the `Security Profile` to `Vault Owner`. Save when complete.
+
+    ![Create Veeva User](assets/veeva-user-create.png) 
+
+>[!IMPORTANT]
+>
+> These actions must be performed as an administrator.
+> You must comply with your organizations security standards when creating users and setting permissions.
+>    

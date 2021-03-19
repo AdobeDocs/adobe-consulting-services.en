@@ -17,7 +17,7 @@ This integration requires the following software versions:
 >This capability is not available out of the box as part of the product. The implementation requires Adobe Consulting maintenance contract. Please reach out to your Adobe representative to find out more.
 >
 
-## Principles
+## Principles and Features
 
 This integration is designed to support three main use cases:
 
@@ -43,7 +43,7 @@ In order to provision this integration, you will need to follow the steps below.
 
 Please follow the flowchart and flowchart details below to request and configure the integration.
 
-![](assets/integration-request.png)
+![Request Access](assets/integration-request.png)
 
 Flowchart Details (maps to steps above):
 
@@ -61,8 +61,9 @@ Support tickets can be logged with Adobe Customer Care. Your Adobe Experience Cl
 [Adobe Admin Console](https://adminconsole.adobe.com/), click on the support tab, and create a case. For any issues with integration, 
 make sure to include the following information:
 
-* **Process Title**: "Veeva Vault PromoMats Integration"
-* **Process Owner**: "Data Engineering"
+* **Process Title**: `Veeva Vault PromoMats Integration`
+* **Process Owner**: `Data Engineering`
+* **Description**: `Description of issue`
 * **AEM Instance URL**: `Place the Adobe Experience Manager instance url here`
 * **Veeva Instance URL**: `Place the Veeva Vault PromoMats instance url here`
 * **Issue Description**: `Place the description of the issue here`
