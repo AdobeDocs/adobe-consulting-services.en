@@ -202,12 +202,12 @@ During PDF/Image generation, an AEM user needs to be created in order to get pag
 
 If using AEM 6.5.5+:
 
-    * [Creating a user in AEM](https://experienceleague.adobe.com/docs/experience-manager-65/forms/administrator-help/setup-organize-users/adding-configuring-users.html?lang=en#create-a-user)
-    * [Adding permissions to a user in AEM](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security.html?lang=en#permissions-in-aem)
+* [Creating a user in AEM](https://experienceleague.adobe.com/docs/experience-manager-65/forms/administrator-help/setup-organize-users/adding-configuring-users.html?lang=en#create-a-user)
+* [Adding permissions to a user in AEM](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security.html?lang=en#permissions-in-aem)
     
 If using AEM Cloud Services:
 
-    * [Managing Users with AEM Cloud Services](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/accessing/aem-users-groups-and-permissions.html?lang=en#accessing)
+* [Managing Users with AEM Cloud Services](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/accessing/aem-users-groups-and-permissions.html?lang=en#accessing)
 
 >[!IMPORTANT]
 >
@@ -223,12 +223,19 @@ In order to use this integration, a user needs to be created in Veeva Vault. To 
     
     ![Navigate to Veeva User](assets/veeva-user-navigate.png)
 
-2. Fill out the required blacks, most importantly, set the `License Type` to `Full User` and the `Security Profile` to `Vault Owner`. Save when complete.
+2. Fill out the required blacks. The simplest setup is to set the `License Type` to `Full User` and the `Security Profile` to `Vault Owner`. Save when complete.
 
-    ![Create Veeva User](assets/veeva-user-create.png) 
+    ![Create Veeva User](assets/veeva-user-create.png)
+    
+The following permissions are required for the specific Veeva document types that are being used:
+ 
+* Create/Read documents
+* Create/Read versions
+* Create/Update metadata
+* Create/Update renditions
 
 >[!IMPORTANT]
 >
 > These actions must be performed as an administrator.
-> You must comply with your organizations security standards when creating users and setting permissions.
->    
+> You must comply with your organizations security standards when creating users and setting permissions. 
+> 

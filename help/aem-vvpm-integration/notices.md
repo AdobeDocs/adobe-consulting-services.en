@@ -20,30 +20,23 @@ company is responsible for complying with any privacy laws and regulations appli
 
 ## Data Sync Frequency
 
-Data is synced.....
+Data is synced when the integration workflow has been manually triggered. 
 
 ## Integration Limitations
 
 Consider the following limitations when using this integration:
 
 * Only the following datatypes are supported when syncing metadata: "Text" and "Multiline Text".
-* Veeva modules are not supported.
-
-## Veeva Vault Limitations
-
-Consider the following AEM limitations when using this integration:
-
+* Veeva modular content is not supported.
+* Veeva linked documents are not supported.
+* The integration does not import content from VVPM to AEM.
+* Metadata validation does not exist.
 * The number of documents are limited based on the Veeva license. See [License Limitations](#veeva-license-limitations).
 * The number of API calls are limited based on the Veeva license. For more information see [API Limitations](https://developer.veevavault.com/docs/#what-are-rate-limits). See [License Limitations](#veeva-license-limitations).
 
-### Veeva License Limitations 
+## Veeva License Limitations 
 
 You can monitor your instance limits by navigating to the VVPM general settings.
 
-[Veeva Limits](assets/veeva-limits.png)
+TODO: ![Veeva Limits](assets/veeva-limits.png)
 
-## Adobe Experience Manager Limitations
-
-Consider the following AEM limitations when using this integration:
-
-* No more than 1000 assets or pages should be ingested into a single folder.
