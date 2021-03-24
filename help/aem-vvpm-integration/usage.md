@@ -17,7 +17,7 @@ This guide will walk you through getting the connector up and running.
 
 >[!IMPORTANT]
 >
->For each system, these steps need to be performed by an **administrator**.
+>For each system, these steps need to be performed by an **administrator** for each system.
 >
 >Steps in this documentation will guide you through creating integrations/registrations that involve assigning permissions and/or admin access.  It is your responsibility to ensure these steps comply with your company policies before performing, and to perform them carefully.
 >
