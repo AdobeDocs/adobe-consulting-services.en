@@ -5,9 +5,9 @@ description: Veeva Vault Integration Overview
 
 # Get Started with Veeva Vault PromoMats and Adobe Experience Manager integration
 
-Manage your content, enforcing rights and compliance while also leveraging first in class experience delivery.  
+This integration will manage your content, enforcing rights and compliance while also leveraging first in class experience delivery.  
 
-This integration requires the following software versions:
+This integration requires the following minimum software versions:
 
 * Adobe Experience Manager, 6.5.5+
 * Veeva Vault PromoMats, 20R3.2+
@@ -21,11 +21,11 @@ This integration requires the following software versions:
 
 This integration is designed to support three main use cases:
 
-1. Content Authoring.  Allow agency users and marketers to create new or edit existing digital content in Adobe Experience Manager (AEM) using compliant digital assets approved and stored in Veeva Vault PromoMats (VVPM).
+1. Content Authoring - Allow agency users and marketers to create new or edit existing digital content in Adobe Experience Manager (AEM) using compliant digital assets approved and stored in Veeva Vault PromoMats (VVPM).
 
-2. Content Approval.  When new content has been created or existing content has been edited in AEM, the content must be approved for use in VVPM supporting the Medical, Legal, Regulatory (MLR) Approval process for Life Sciences.
+2. Content Approval - When new content has been created or existing content has been edited in AEM, the content must be approved for use in VVPM supporting the Medical, Legal, Regulatory (MLR) Approval process for Life Sciences.
 
-3. Content Management.  Provide visibility of asset utilization by establishing relationships in PromoMats between digital tactics (e.g. email, presentations, websites) and their elements (e.g. logos, photography, graphics) created in AEM.
+3. Content Management - Provide visibility of asset utilization by establishing relationships in PromoMats between digital tactics (e.g. email, presentations, websites) and their elements (e.g. logos, photography, graphics) created in AEM.
 
 The benefits include:
 
@@ -53,7 +53,7 @@ Flowchart Details (maps to steps above):
 
 ## Support
 
-This integration comes with 24x7 support. The follow describes how to contact and log an issue with the support team.
+The follow describes how to contact and log an issue with the support team.
 
 ### Requesting Integration or Adobe Experience Manager Support
 
@@ -61,14 +61,13 @@ Support tickets can be logged with Adobe Customer Care. Your Adobe Experience Cl
 [Adobe Admin Console](https://adminconsole.adobe.com/), click on the support tab, and create a case. For any issues with integration, 
 make sure to include the following information:
 
-* **Process Title**: `Veeva Vault PromoMats Integration`
+* **Process Title**: `AEM - Veeva Vault Integration`
 * **Process Owner**: `Data Engineering`
-* **Description**: `Description of issue`
-* **AEM Instance URL**: `Place the Adobe Experience Manager instance url here`
-* **Veeva Instance URL**: `Place the Veeva Vault PromoMats instance url here`
-* **Issue Description**: `Place the description of the issue here`
-* **Customer ID**: `Customer ID received in the on-boarding email, if not accessible, please use customer name here`
-* **AEM POC**: TODO
+* **Description**: `Description of the issue`
+* **Point of Contact**: `The email address(es) for relavant AEM point of contacts for your organization.` 
+* **AEM Instance URL**: `Place the Adobe Experience Manager instance url here.`
+* **Veeva Instance URL**: `Place the Veeva Vault PromoMats instance url here.`
+* **Customer ID**: `Provide the Customer ID included in the on-boarding email sent to your team. You can just put your company name here if the ID is not available`
 
 ### Requesting Veeva Vault PromoMats Support
 

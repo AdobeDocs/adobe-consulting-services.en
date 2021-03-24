@@ -5,7 +5,6 @@ description: Veeva Vault Integration FAQ
 
 # Frequently Asked Questions 
 
-
 What metadata should be synced to Veeva?
 
     It is important to understand the metadata based on the content type (e.g. promotions) in the Veeva Portal. 

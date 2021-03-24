@@ -7,7 +7,7 @@ description: Veeva Vault Integration Notices
 
 ## Versions
 
-This integration requires the following software versions:
+This integration requires the following minimum software versions:
 
 * Adobe Experience Manager, 6.5.5+
 * Veeva Vault PromoMats, 20R3.2+

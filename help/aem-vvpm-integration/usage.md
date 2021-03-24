@@ -9,7 +9,7 @@ description: Veeva Vault Integration Usage
 
 The following video walk-through describes using the connector:
 
-![](https://video.tv.adobe.com/v/332137/?quality=12&learn=on)
+[!VIDEO](https://video.tv.adobe.com/v/332137/?quality=12&learn=on)
 
 ## Setup
 
@@ -27,12 +27,12 @@ This guide will walk you through getting the connector up and running.
 You will receive access to the integration AEM package. There are two options to install the integration: 
 
 1. **Package Installation** - Straight forward and less involved.
-2. **POM Installation** - More advanced, but can be useful when using CICD and upgrading the integration.
+2. **POM Installation** - More advanced, but can be useful when using AEM Cloud Manager and upgrading the integration.
 
 #### Package Installation
 
 To install the package, download it with the link provided. [Detailed instructions for installing an AEM package can be found by clicking here.](
-https://experienceleague.adobe.com/docs/experience-manager-64/administering/contentmanagement/package-manager.html?lang=en#installing-packages) 
+https://experienceleague.adobe.com/docs/experience-manager-64/administering/contentmanagement/package-manager.html?#installing-packages) 
 
 #### POM Installation
 
@@ -60,45 +60,46 @@ To include the connector in your POM, follow these steps:
     </settings>
     ```
 
-2. Add the following to the projects `pom.xml` file:
+2. Add the following to the projects `pom.xml` file (replace project.dependencies.dependency.version with appropriate version):
 
     ```
-    <build>
+    <project>
         ...
         <dependencies>
             ...
             <dependency>
-                ...
                 <groupId>com.adobe.acs.aemveeva</groupId>
                 <artifactId>aem-veeva-connector</artifactId>
                 <version>1.0.0</version>
-                ...
             </dependency>            
             ...
         </dependencies>
         ...
-        <extensions>
+        <build>
             ...
-            <extension>
-                <groupId>com.allogy.maven.wagon</groupId>
-                <artifactId>maven-s3-wagon</artifactId>
-                <version>1.2.0</version>
-            </extension>
+            <extensions>
+                ...
+                <extension>
+                    <groupId>com.allogy.maven.wagon</groupId>
+                    <artifactId>maven-s3-wagon</artifactId>
+                    <version>1.2.0</version>
+                </extension>
+                ...
+            </extensions>
             ...
-        </extensions>
+        </build>
         ...
-    </build>
-    ...
-    <distributionManagement>
-        <repository>
-            <id>repo.ea.adobe.net</id>
-            <url>s3://repo.ea.adobe.net/release</url>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
-        </repository>
-    </distributionManagement>
-    ...
+        <repositories>
+            <repository>
+                <id>repo.ea.adobe.net</id>
+                <url>s3://repo.ea.adobe.net/release</url>
+                <releases>
+                    <enabled>true</enabled>
+                </releases>
+            </repository>
+        </repositories>
+        ...
+    </project>
     ```
 
 ### Cloud Configuration
@@ -202,16 +203,16 @@ During PDF/Image generation, an AEM user needs to be created in order to get pag
 
 If using AEM 6.5.5+:
 
-* [Creating a user in AEM](https://experienceleague.adobe.com/docs/experience-manager-65/forms/administrator-help/setup-organize-users/adding-configuring-users.html?lang=en#create-a-user)
-* [Adding permissions to a user in AEM](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security.html?lang=en#permissions-in-aem)
+* [Creating a user in AEM](https://experienceleague.adobe.com/docs/experience-manager-65/forms/administrator-help/setup-organize-users/adding-configuring-users.html?#create-a-user)
+* [Adding permissions to a user in AEM](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security.html?#permissions-in-aem)
     
 If using AEM Cloud Services:
 
-* [Managing Users with AEM Cloud Services](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/accessing/aem-users-groups-and-permissions.html?lang=en#accessing)
+* [Managing Users with AEM Cloud Services](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/accessing/aem-users-groups-and-permissions.html?#accessing)
 
 >[!IMPORTANT]
 >
-> These actions must be performed as an administrator.
+> These actions must be performed as an administrator for each system.
 > You must comply with your organizations security standards when creating users and setting permissions.
 >
 
@@ -236,6 +237,6 @@ The following permissions are required for the specific Veeva document types tha
 
 >[!IMPORTANT]
 >
-> These actions must be performed as an administrator.
+> These actions must be performed as an administrator for each system.
 > You must comply with your organizations security standards when creating users and setting permissions. 
 > 
