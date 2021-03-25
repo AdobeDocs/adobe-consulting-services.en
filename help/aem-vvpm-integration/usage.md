@@ -9,7 +9,7 @@ description: Veeva Vault Integration Usage
 
 The following video walk-through describes using the connector:
 
-[!VIDEO](https://video.tv.adobe.com/v/332137/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/332137/?quality=12&learn=on)
 
 ## Setup
 
