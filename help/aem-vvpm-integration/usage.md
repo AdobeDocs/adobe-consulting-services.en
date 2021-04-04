@@ -1,8 +1,8 @@
 ---
 title: Veeva Vault Integration Usage
 description: Veeva Vault Integration Usage
+exl-id: efff7af1-eb25-4a1d-b7ef-52e3336970ff
 ---
-
 # Integration Usage
 
 ## Walkthrough
@@ -239,4 +239,4 @@ The following permissions are required for the specific Veeva document types tha
 >
 > These actions must be performed as an administrator for each system.
 > You must comply with your organizations security standards when creating users and setting permissions. 
-> 
+>

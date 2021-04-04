@@ -1,8 +1,8 @@
 ---
 title: Veeva Vault Integration Notices
 description: Veeva Vault Integration Notices
+exl-id: 1a188671-d123-4475-a607-65743ba0dadd
 ---
-
 # Best practices, Guardrails, and Notices
 
 ## Versions
@@ -39,4 +39,3 @@ Consider the following limitations when using this integration:
 You can monitor your instance limits by navigating to the VVPM general settings.
 
 TODO: ![Veeva Limits](assets/veeva-limits.png)
-

@@ -1,8 +1,8 @@
 ---
 title: Veeva Vault Integration FAQ
 description: Veeva Vault Integration FAQ
+exl-id: c308ebb3-7881-4094-9f35-c67a96fb5ab1
 ---
-
 # Frequently Asked Questions 
 
 **What metadata should be synced to Veeva?**
