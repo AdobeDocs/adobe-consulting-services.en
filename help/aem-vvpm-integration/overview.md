@@ -57,9 +57,7 @@ The follow describes how to contact and log an issue with the support team.
 
 ### Requesting Integration or Adobe Experience Manager Support
 
-Support tickets can be logged with Adobe Customer Care. Your Adobe Experience Cloud administrator will need to log on to 
-[Adobe Admin Console](https://adminconsole.adobe.com/), click on the support tab, and create a case. For any issues with integration, 
-make sure to include the following information:
+Support tickets can be logged with Adobe Customer Care. Your Adobe Experience Cloud administrator will need to log on to [Adobe Admin Console](https://adminconsole.adobe.com/), click on the support tab, and create a case. For any issues with integration, make sure to include the following information:
 
 * **Process Title**: `AEM - Veeva Vault Integration`
 * **Process Owner**: `Data Engineering`
@@ -71,6 +69,4 @@ make sure to include the following information:
 
 ### Requesting Veeva Vault PromoMats Support
 
-Sometimes, the issue being experienced is a problem with the operation of the Veeva Vault PromoMats instance. If that is the case, 
-your Veeva Vault PromoMats administrator might be directed to create a support ticket with [Veeva Support](http://support.veeva.com/). The status of 
-the Veeva instance can be viewed by navigating to [Veeva Trust](http://trust.veeva.com/).
+Sometimes, the issue being experienced is a problem with the operation of the Veeva Vault PromoMats instance. If that is the case, your Veeva Vault PromoMats administrator might be directed to create a support ticket with [Veeva Support](http://support.veeva.com/). The status of the Veeva instance can be viewed by navigating to [Veeva Trust](http://trust.veeva.com/).

@@ -14,9 +14,7 @@ This integration requires the following minimum software versions:
 
 ## Data Privacy
 
-This integration is designed to transfer end user data between Adobe Experience Manager and Veeva Vault PromoMats. 
-This data can includes personal information if it is contained in your end user data.  As a data controller, your 
-company is responsible for complying with any privacy laws and regulations applicable to your collection and use of personal data.
+This integration is designed to transfer end user data between Adobe Experience Manager and Veeva Vault PromoMats. This data can includes personal information if it is contained in your end user data.  As a data controller, your company is responsible for complying with any privacy laws and regulations applicable to your collection and use of personal data.
 
 ## Data Sync Frequency
 
