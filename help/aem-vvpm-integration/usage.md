@@ -42,7 +42,7 @@ To include the connector in your POM, follow these steps. Replace your username 
 
     >[!IMPORTANT]
     >
-    >If using cloud manager, the secure approach is to follow the steps found here for password protected Maven repositories: https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/getting-access/create-application-project/setting-up-project.html?lang=en#password-protected-maven-repositories
+    >If using cloud manager, the secure approach is to follow the steps found here for [password protected Maven repositories](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/getting-access/create-application-project/setting-up-project.html?lang=en#password-protected-maven-repositories).
     >
 
     ```
