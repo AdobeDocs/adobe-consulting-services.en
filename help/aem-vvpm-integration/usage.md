@@ -36,15 +36,20 @@ https://experienceleague.adobe.com/docs/experience-manager-64/administering/cont
 
 #### POM Installation
 
-To include the connector in your POM, follow these steps:
+To include the connector in your POM, follow these steps. Replace your username and password with the ones received in the onboarding email.
 
-1. Add the following to the `~/.m2/settings.xml` replacing `YOUR_USERNAME` with the username provided and `YOUR_PASSWORD` with the the password provided:
+1. Add the following to the `.cloudmanager/maven/settings.xml` file in your project or `~/.m2/settings.xml` on your computer. Replace `YOUR_USERNAME` with the username provided and `YOUR_PASSWORD` with the the password provided.
+
+    >[!IMPORTANT]
+    >
+    >If using cloud manager, the secure approach is to follow the steps found here for password protected Maven repositories: https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/getting-access/create-application-project/setting-up-project.html?lang=en#password-protected-maven-repositories
+    >
 
     ```
     <settings>
-    ...
-        <servers>
         ...
+        <servers>
+            ...
             <server>
                 <id>repo.ea.adobe.net</id>
                 <username>YOUR_USERNAME</username>
@@ -54,26 +59,16 @@ To include the connector in your POM, follow these steps:
                   <wagonProvider>s3</wagonProvider>
                 </configuration>
             </server>
-        ...
+            ...
         </servers>
-    ...
+        ...
     </settings>
     ```
 
-2. Add the following to the projects `pom.xml` file (replace project.dependencies.dependency.version with appropriate version):
+2. Add the following to the project's `pom.xml` file:
 
     ```
     <project>
-        ...
-        <dependencies>
-            ...
-            <dependency>
-                <groupId>com.adobe.acs.aemveeva</groupId>
-                <artifactId>aem-veeva-connector</artifactId>
-                <version>1.0.0</version>
-            </dependency>            
-            ...
-        </dependencies>
         ...
         <build>
             ...
@@ -90,6 +85,7 @@ To include the connector in your POM, follow these steps:
         </build>
         ...
         <repositories>
+            ...
             <repository>
                 <id>repo.ea.adobe.net</id>
                 <url>s3://repo.ea.adobe.net/release</url>
@@ -97,7 +93,54 @@ To include the connector in your POM, follow these steps:
                     <enabled>true</enabled>
                 </releases>
             </repository>
+            ...
         </repositories>
+        ...
+    </project>
+    ```
+   
+3. Add the following to the project's `all/pom.xml` file. Replace `project.dependencies.dependency.version` with appropriate version and `project.build.plugins.plugin.configuration.embeddeds.embedded.target` with the correct path.
+
+    ```
+    <project>
+        ...
+        <build>
+            ...
+            <plugins>
+                ...
+                <plugin>
+                    <groupId>org.apache.jackrabbit</groupId>
+                    <artifactId>filevault-package-maven-plugin</artifactId>
+                    ...
+                    <configuration>
+                        ...
+                        <embeddeds>
+                            ...
+                            <embedded>
+                                <groupId>com.adobe.acs.aemveeva</groupId>
+                                <artifactId>aem-veeva-connector.all</artifactId>
+                                <type>zip</type>
+                                <target>/apps/APP_NAME-packages/application/install</target>
+                            </embedded>
+                            ...
+                        </embeddeds>
+                    </configuration>
+                </plugin>
+                ...
+            </plugins>
+            ...
+        </build>
+        ...
+        <dependencies>
+            ...
+            <dependency>
+                <groupId>com.adobe.acs.aemveeva</groupId>
+                <artifactId>aem-veeva-connector.all</artifactId>
+                <version>1.0.5</version>
+                <type>zip</type>
+            </dependency>            
+            ...
+        </dependencies>
         ...
     </project>
     ```
