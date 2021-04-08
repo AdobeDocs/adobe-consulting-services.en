@@ -32,6 +32,19 @@ The benefits include:
 * Maintaining a single source of truth for assets and content without duplication across digital repositories 
 * Leveraging both Veeva Vault for rights and compliance management and AEM for best in class and complete content management.
 
+What does the integration do?
+
+* Helps automate moving content and metadata between AEM and Veeva Vault.
+* Reduces manual effort in sending content to Veeva for Approval workflows.
+* Each system is used for its strengths and the connector assists in moving content automatically between the systems to help speed up time to market
+
+What does the connector NOT do?
+
+* Does not replicate AEM processes and functionality in Veeva or vice-versa.
+* Does not do MLR by itself. It assists in automation of sending content to Veeva to where MLR happens. 
+* Not meant to be used to create an identical setup between AEM and Veeva. Not all content needs to move between the two platforms.
+
+
 >[!IMPORTANT]
 >
 >This integration currently considers AEM as the source of truth for content synchronization.  
