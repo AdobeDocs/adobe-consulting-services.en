@@ -12,7 +12,7 @@ This integration requires the following minimum software versions:
 * Adobe Experience Manager, 6.5.5+
 * Veeva Vault PromoMats, 20R3.2+
 
->[!IMPORTANT]
+>[!NOTE]
 >
 >Service users and appropriate permissions are required in both systems for the integration.
 >
