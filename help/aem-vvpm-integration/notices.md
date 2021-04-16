@@ -14,21 +14,22 @@ This integration requires the following minimum software versions:
 
 ## Data Privacy
 
-This integration is designed to transfer end user data between Adobe Experience Manager and Veeva Vault PromoMats. This data can includes personal information if it is contained in your end user data.  As a data controller, your company is responsible for complying with any privacy laws and regulations applicable to your collection and use of personal data.
+This integration is designed to transfer content between Adobe Experience Manager and Veeva Vault PromoMats. As a data controller, your company is responsible for complying with any privacy laws and regulations applicable to your collection and use of data.
 
-## Data Sync Frequency
+## Content Sync Frequency
 
-Data is synced when the integration workflow has been manually triggered. 
+AEM content and metadata is synced from AEM to VVPN when the integration workflow has been triggered. This can be done automatically or manually. VVPM Metadata is synced from VVPM to AEM. This can be done automatically through a scheduler or manually through a button click. 
 
-## Integration Limitations
+## Integration Limitations and Best Practices and Guardrails
 
 Consider the following limitations when using this integration:
 
 * Only the following datatypes are supported when syncing metadata: "Text" and "Multiline Text".
-* Veeva modular content is not supported.
-* Veeva linked documents are not supported.
+* While the integration supports AEM modular content (Content Fragments and Experience Fragments), it does not support VVPM modular content.
+* VVPM linked documents are not supported. 
+* Syncing VVPM visual annotations from VVPM to AEM are not supported.
 * The integration does not import content from VVPM to AEM.
-* Metadata validation does not exist.
+* Metadata validation is not supported.
 * The number of documents are limited based on the Veeva license. See [License Limitations](#veeva-license-limitations).
 * The number of API calls are limited based on the Veeva license. For more information see [API Limitations](https://developer.veevavault.com/docs/#what-are-rate-limits). See [License Limitations](#veeva-license-limitations).
 

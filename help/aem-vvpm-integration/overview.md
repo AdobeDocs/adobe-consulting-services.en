@@ -14,29 +14,42 @@ This integration requires the following minimum software versions:
 
 >[!IMPORTANT]
 >
+>Service users and appropriate permissions are required in both systems for the integration.
+>
+
+>[!IMPORTANT]
+>
 >This capability is not available out of the box as part of the product. The implementation requires Adobe Consulting maintenance contract. Please reach out to your Adobe representative to find out more.
 >
 
 ## Principles and Features
 
-This integration is designed to support three main use cases:
+This integration is designed to support two main use cases:
 
-1. Content Authoring - Allow agency users and marketers to create new or edit existing digital content in Adobe Experience Manager (AEM) using compliant digital assets approved and stored in Veeva Vault PromoMats (VVPM).
+1. Content Approval - When new content has been created or existing content has been edited in AEM, the content must be approved for use in VVPM supporting the Medical, Legal, Regulatory (MLR) Approval process for Life Sciences.
 
-2. Content Approval - When new content has been created or existing content has been edited in AEM, the content must be approved for use in VVPM supporting the Medical, Legal, Regulatory (MLR) Approval process for Life Sciences.
-
-3. Content Management - Provide visibility of asset utilization by establishing relationships in PromoMats between digital tactics (e.g. email, presentations, websites) and their elements (e.g. logos, photography, graphics) created in AEM.
+2. Content Management - Provide visibility of asset utilization by establishing relationships in PromoMats between digital tactics (e.g. email, presentations, websites) and their elements (e.g. logos, photography, graphics) created in AEM for documents originating in AEM.
 
 The benefits include:
 
-* Maintaining a single source of truth for assets and content without duplication across digital repositories 
-* Leveraging both Veeva Vault for rights and compliance management and AEM for best in class and complete content management.
+* Maintaining a single source of truth for assets and content without duplication across digital repositories.
+* Leveraging both Veeva Vault for rights and compliance management and AEM for best in class and asset and content creation/delivery.
+* Helps automate moving content and metadata between AEM and Veeva Vault.
+* Reduces manual effort in sending content to Veeva for Approval workflows.
+* Each system is used for its strengths and the connector assists in moving content automatically between the systems to help speed up time to market.
 
 What does the integration do?
 
-* Helps automate moving content and metadata between AEM and Veeva Vault.
-* Reduces manual effort in sending content to Veeva for Approval workflows.
-* Each system is used for its strengths and the connector assists in moving content automatically between the systems to help speed up time to market
+* Supports sending AEM Site Pages, Assets, Content Fragments, and Experience Fragments to VVPM. AEM Pages, Content Fragments, and Experience Fragments can be sent as screenshot PDFs or images. AEM Assets binaries are sent as is.
+* Supports manual and automated syncing of select metadata elements that are configurable from AEM to VVPM.
+* Supports manual and automated syncing of select metadata elements that are configurable from VVPM to AEM. 
+* Supports relationships between AEM Site Pages, Assets, Content Fragments, and Experience Fragments in VVPM to automate content relationships.
+* Supports rendition generation for multiple device types.
+
+>[!NOTE]
+>
+>Please see integration usage documentation for further details on configuration options.  
+>
 
 What does the connector NOT do?
 
