@@ -37,4 +37,4 @@ Consider the following limitations when using this integration:
 
 You can monitor your instance limits by navigating to the VVPM general settings.
 
-TODO: ![Veeva Limits](assets/veeva-limits.png)
+![Veeva Limits](assets/veeva-limits.png)
