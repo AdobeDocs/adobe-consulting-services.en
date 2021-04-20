@@ -27,7 +27,7 @@ No, not at this time. Visual annotations are only accessible via API as a PDF.
 
 **How do we set permissions on VVPM documents synced by the integration?** 
 
-The integration uses a service user to upload documents through the API.  Document defaulting and overriding rules (defaulting roles on documents) are supported only in the VVPM user interface, and not applied when using the API. The recommendation is to use DAC (Dynamic Access Control) for role assignments. DAC is enforced through all the touch points, including the API. (See documentation here.)[http://vaulthelp2.vod309.com/wordpress/admin-user-help/ah-user-permissions-access-control/about-dynamic-access-control-for-documents/] 
+The integration uses a service user to upload documents through the API.  Document defaulting and overriding rules (defaulting roles on documents) are supported only in the VVPM user interface, and not applied when using the API. The recommendation is to use DAC (Dynamic Access Control) for role assignments. DAC is enforced through all the touch points, including the API. [See documentation here.](http://vaulthelp2.vod309.com/wordpress/admin-user-help/ah-user-permissions-access-control/about-dynamic-access-control-for-documents/) 
 
 **Does the integration support multiple VVPM instances?**
 
