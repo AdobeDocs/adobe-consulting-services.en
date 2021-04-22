@@ -31,14 +31,14 @@ You will receive access to the integration AEM package. There are two options to
 
 #### Package Installation
 
-To install the package, download it with the link provided. [Detailed instructions for installing an AEM package can be found by clicking here.](
+To install the package, download it with the link provided in the onboarding email. [Detailed instructions for installing an AEM package can be found by clicking here.](
 https://experienceleague.adobe.com/docs/experience-manager-64/administering/contentmanagement/package-manager.html?#installing-packages) 
 
 #### POM Installation
 
 To include the connector in your POM, follow these steps. Replace your username and password with the ones received in the onboarding email.
 
-1. Add the following to the `.cloudmanager/maven/settings.xml` file in your project or `~/.m2/settings.xml` on your computer. Replace `YOUR_USERNAME` with the username provided and `YOUR_PASSWORD` with the the password provided.
+1. Add the following to the `.cloudmanager/maven/settings.xml` file in your project or `~/.m2/settings.xml` on your computer. Replace `YOUR_USERNAME` with the username and `YOUR_PASSWORD` with the the password provided in the onboarding email.
 
     >[!IMPORTANT]
     >
