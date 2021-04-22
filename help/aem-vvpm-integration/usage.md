@@ -175,10 +175,10 @@ If the project needs to generate PDFs or images for pages, this tab is required.
 
 ![Adobe IO Tab](assets/adobe-io-tab.png)
 
-1. Required. The Adobe IO endpoint for creating PDF Images. (e.g. `https://my-namespace.adobeioruntime.net/api/v1/web/aem-veeva-serverless-0.0.2/trigger-action.json`)
-2. Required. The action name for page image generation. This value must be `aem-veeva-serverless-0.0.2/get-image-async`.
-3. Required. The action name for html image generation. This value must be `aem-veeva-serverless-0.0.2/get-pdf-async`.
-4. Required. The Adobe IO endpoint to get the state of the generation.(e.g. `https://my-namespace.adobeioruntime.net/api/v1/web/aem-veeva-serverless-0.0.2/get-state-value`)
+1. Required. The Adobe IO endpoint for creating PDF Images that was provided in the onboarding email. (e.g. `https://my-namespace.adobeioruntime.net/api/v1/web/aem-veeva-serverless-0.0.2/trigger-action.json`)
+2. Required. The action name for page image generation. This value must be `aem-veeva-integration/get-image-async`.
+3. Required. The action name for html image generation. This value must be `aem-veeva-integration/get-pdf-async-new`.
+4. Required. The Adobe IO endpoint to get the state of the generation that was provided in the onboarding email.(e.g. `https://my-namespace.adobeioruntime.net/api/v1/web/aem-veeva-serverless-0.0.2/get-state-value`)
 5. Required. AEM username to be used by Adobe IO. See [AEM User Creation](#aem-user-creation).
 6. Required. AEM password to be used by Adobe IO. See [AEM User Creation](#aem-user-creation).
 7. Optional. Default timeout is to let the page respond until a specified time after which AIO service stops trying to get a response. Default value is `30000`.
@@ -194,16 +194,22 @@ Fill out the following in the advanced tab:
 ![Advanced Tab](assets/advanced-tab.png)
 
 1. Required for PDF/image generation. The filename pattern used when creating PDFs/images. `{name}` can be templated. (e.g. `{name}-screenshot`)
-2. Required for PDF/image generation. The device types for which page screenshots are required. Valid types include `Desktop`, `Tab (iPad)`, and `Mobile (iPhone X)`.
-3. Required for PDF/image generation. Screenshot type to create. Either `PDF` or `Image`.
-4. Required for PDF/image generation. The PDF type to generate. Either `Print CSS Based PDF` or `Pixel Perfect Screenshot PDF`.
-5. Required for PDF/image generation. The Image type to generate. Either `PNG` or `JPEG`.
-6. Required. Workflow to run once Veeva Vault Approval trigger has come through.
-7. Required. Workflow to run once Veeva Vault Reject trigger has come through.
-8. Optional. Property name for Document Id in Veeva Vault. Default value is `id`.
-9. Optional. Property name for Status in Veeva Vault. Default value is `status__v`.
-10. Optional. Property name for Document Modified Date. Default value is `version_modified_date__v`.
-11. Optional. Property name for document resource url. Default value will be `external_id__v`. If this field is already used, then create a different field in Veeva and populate the field name here.
+2. Optional. The device types for which page screenshots are required other than Desktop. Valid types include `Tab (iPad)`, and `Mobile (iPhone X)`.
+3. Optional. The rendition type value in Veeva representing above rendition. (e.g. `web_ready__c`) 
+4. Required for PDF/image generation. Screenshot type to create. Either `PDF` or `Image`.
+5. Required for PDF/image generation. The PDF type to generate. Either `Print CSS Based PDF` or `Pixel Perfect Screenshot PDF`.
+6. Required for PDF/image generation. The Image type to generate. Either `PNG` or `JPEG`.
+7. Required. Workflow to run once Veeva Vault Approval trigger has come through.
+8. Required. Status property value representing Approved. (e.g. `Approved for Distribution`)
+9. Required. Workflow to run once Veeva Vault Reject trigger has come through.
+10. Required. Status property value representing Rejected/Not approved. (e.g. `Rejected`)
+11. Optional. Property name for Document Id in Veeva Vault. Default value is `id`.
+12. Optional. Property name for Status in Veeva Vault. Default value is `status__v`.
+13. Optional. Property name for Document Modified Date. Default value is `version_modified_date__v`.
+14. Optional. Property name for document resource url. Default value will be `external_id__v`. If this field is already used, then create a different field in Veeva and populate the field name here. This field will be used in Veeva to hold the AEM resource path. This is needed for automated metadata syncing.
+15. Optional. Property name for Major Version Number in Veeva Vault. Default value is `major_version_number__v`.
+16. Optional. Property name for Minor Version Number in Veeva Vault. Default value is `minor_version_number__v`.
+17. Optional. Veeva Vault relationship type value. All the assets added to page will be represented as related based on this value. Default value is `supporting_document__c`.
 
 #### Page Tab
 
@@ -216,7 +222,7 @@ If syncing pages, fill out the following in the page tab:
     b. Veeva property name entered exactly at is exists in Veeva. (e.g. `name__v`)  
     c. Property type. Either `Text` or `Multiline Text`.
 
-2. Required. Map a property from Veeva to AEM. **NOTE! The mapping of `status__v` to a representative AEM property must exist.**
+2. Required. Map a property from Veeva to AEM.
     a. Veeva property name entered exactly at is exists in Veeva. (e.g. `name__v`)
     b. AEM property name. Selectable from AEM properties. (e.g. `jcr:title`)
     c. Property type. Either `Text` or `Multiline Text`.
@@ -233,7 +239,7 @@ If syncing assets, fill out the following in the asset tab:
     b. Veeva property name entered exactly at is exists in Veeva. (e.g. `name__v`)
     c. Property type. Either `Text` or `Multiline Text`.
 
-2. Required. Map a property from Veeva to AEM. **NOTE! The mapping of `status__v` to a representative AEM property must exist.**
+2. Required. Map a property from Veeva to AEM.
     a. Veeva property name entered exactly at is exists in Veeva. (e.g. `name__v`)
     b. AEM property name. Selectable from AEM properties. (e.g. `/jcr:content/metadata/jcr:title`)
     c. Property type. Either `Text` or `Multiline Text`.
@@ -252,6 +258,10 @@ If using AEM 6.5.5+:
 If using AEM Cloud Services:
 
 * [Managing Users with AEM Cloud Services](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/accessing/aem-users-groups-and-permissions.html?#accessing)
+
+The following permissions are required for the AEM service user on the content that will be converted to PDF/Image and pushed to Veeva:
+
+* Read
 
 >[!IMPORTANT]
 >
