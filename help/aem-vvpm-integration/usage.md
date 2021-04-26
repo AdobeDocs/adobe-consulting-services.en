@@ -218,7 +218,7 @@ If syncing pages, fill out the following in the page tab:
 ![Page Tab](assets/page-tab.png)
 
 1. Required. Map a property from AEM to Veeva.
-    a. AEM property name. Selectable from AEM properties. (e.g. `jcr:title`)
+    a. AEM property name. Selectable from AEM properties. (e.g. `jcr:title`) `{name}` can be templated.
     b. Veeva property name entered exactly at is exists in Veeva. (e.g. `name__v`)  
     c. Property type. Either `Text` or `Multiline Text`.
 
@@ -235,7 +235,7 @@ If syncing assets, fill out the following in the asset tab:
 ![Asset Tab](assets/asset-tab.png)
 
 1. Required. Map a property from AEM to Veeva.
-    a. AEM property name. Selectable from AEM properties. (e.g. `/jcr:content/metadata/jcr:title`)
+    a. AEM property name. Selectable from AEM properties. (e.g. `/jcr:content/metadata/jcr:title`) `{name}` can be templated.
     b. Veeva property name entered exactly at is exists in Veeva. (e.g. `name__v`)
     c. Property type. Either `Text` or `Multiline Text`.
 
@@ -277,7 +277,7 @@ In order to use this integration, a user needs to be created in Veeva Vault. To 
     
     ![Navigate to Veeva User](assets/veeva-user-navigate.png)
 
-2. Fill out the required blacks. The simplest setup is to set the `License Type` to `Full User` and the `Security Profile` to `Vault Owner`. Save when complete.
+2. Fill out the required inputs. The simplest setup is to set the `License Type` to `Full User` and the `Security Profile` to `Vault Owner`. Save when complete.
 
     ![Create Veeva User](assets/veeva-user-create.png)
     
