@@ -91,7 +91,6 @@ Support tickets can be logged with Adobe Customer Care. Your Adobe Experience Cl
 * **Point of Contact**: `The email address(es) for relavant AEM point of contacts for your organization.` 
 * **AEM Instance URL**: `Place the Adobe Experience Manager instance url here.`
 * **Veeva Instance URL**: `Place the Veeva Vault PromoMats instance url here.`
-* **Customer ID**: `Provide the Customer ID included in the on-boarding email sent to your team. You can just put your company name here if the ID is not available`
 
 ### Requesting Veeva Vault PromoMats Support
 
