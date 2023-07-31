@@ -8,3 +8,4 @@ exl-id: ef3b1383-e06d-451c-921b-4593230cdcec
 This repository documents solutions that have been created by ACS for use with AEM.
 
 ![ACS Commons logo](assets/acs-commons.png)
+ 
