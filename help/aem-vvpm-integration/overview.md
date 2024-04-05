@@ -27,8 +27,7 @@ This integration requires the following minimum software versions:
 This integration is designed to support two main use cases:
 
 1. Content Approval - When new content has been created or existing content has been edited in AEM, the content must be approved for use in VVPM supporting the Medical, Legal, Regulatory (MLR) Approval process for Life Sciences.
-
-2. Content Management - Provide visibility of asset utilization by establishing relationships in PromoMats between digital tactics (e.g. email, presentations, websites) and their elements (e.g. logos, photography, graphics) created in AEM for documents originating in AEM.
+1. Content Management - Provide visibility of asset utilization by establishing relationships in PromoMats between digital tactics (e.g. email, presentations, websites) and their elements (e.g. logos, photography, graphics) created in AEM for documents originating in AEM.
 
 The benefits include:
 
@@ -60,8 +59,7 @@ What does the connector NOT do?
 
 >[!IMPORTANT]
 >
->This integration currently considers AEM as the source of truth for content synchronization.  
->
+>This integration currently considers AEM as the source of truth for content synchronization. 
 
 ## Getting the Integration
 
