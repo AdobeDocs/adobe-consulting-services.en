@@ -5,7 +5,7 @@ description: Consulting Experience Manager Documentation
 type: Documentation
 git-repo: https://github.com/AdobeDocs/adobe-consulting-services.en
 index: y
-hide: n
+author: Anon
 ---
 
 # Metadata for internal use
