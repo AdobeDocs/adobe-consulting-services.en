@@ -35,4 +35,4 @@ The integration uses a cloud configuration approach that allows mutliple Veeva e
 
 **Does the integration support AEM publish?**
 
- No, this integration works only with AEM author. It is meant to facilitate MLR review cycles before the content is published. 
+No, this integration works only with AEM author. It is meant to facilitate MLR review cycles before the content is published. 

@@ -43,7 +43,6 @@ To include the connector in your POM, follow these steps. Replace your username 
     >[!IMPORTANT]
     >
     >If using cloud manager, the secure approach is to follow the steps found here for [password protected Maven repositories](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/getting-access/create-application-project/setting-up-project.html?lang=en#password-protected-maven-repositories).
-    >
 
     ```
     <settings>
@@ -292,4 +291,3 @@ The following permissions are required for the specific Veeva document types tha
 >
 > These actions must be performed as an administrator for each system.
 > You must comply with your organizations security standards when creating users and setting permissions. 
->
