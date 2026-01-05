@@ -93,3 +93,4 @@ Support tickets can be logged with Adobe Customer Care. Your Adobe Experience Cl
 ### Requesting Veeva Vault PromoMats Support
 
 Sometimes, the issue being experienced is a problem with the operation of the Veeva Vault PromoMats instance. If that is the case, your Veeva Vault PromoMats administrator might be directed to create a support ticket with [Veeva Support](http://support.veeva.com/). The status of the Veeva instance can be viewed by navigating to [Veeva Trust](http://trust.veeva.com/).
+
