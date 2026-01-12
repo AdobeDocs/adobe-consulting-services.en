@@ -266,7 +266,6 @@ The following permissions are required for the AEM service user on the content t
 >
 > These actions must be performed as an administrator for each system.
 > You must comply with your organizations security standards when creating users and setting permissions.
->
 
 #### Veeva User Creation
 
@@ -276,7 +275,7 @@ In order to use this integration, a user needs to be created in Veeva Vault. To 
     
     ![Navigate to Veeva User](assets/veeva-user-navigate.png)
 
-2. Fill out the required inputs. The simplest setup is to set the `License Type` to `Full User` and the `Security Profile` to `Vault Owner`. Save when complete.
+1. Fill out the required inputs. The simplest setup is to set the `License Type` to `Full User` and the `Security Profile` to `Vault Owner`. Save when complete.
 
     ![Create Veeva User](assets/veeva-user-create.png)
     
