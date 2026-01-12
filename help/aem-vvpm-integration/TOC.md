@@ -7,8 +7,7 @@ user-guide-description: AEM <> VVPM Integration documentation.
 
 # AEM <> VVPM Integration {#aem-vvpm-integration}
 
-+ [Overview](overview.md)
-+ [Usage](usage.md)
-+ [Notices](notices.md)
-+ [FAQ](faq.md)
-
++ [Overview](/help/aem-vvpm-integration/overview.md)
++ [Usage](/help/aem-vvpm-integration/usage.md)
++ [Notices](/help/aem-vvpm-integration/notices.md)
++ [FAQ](/help/aem-vvpm-integration/faq.md)
