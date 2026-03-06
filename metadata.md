@@ -4,8 +4,7 @@ solution: Experience Manager
 description: Consulting Experience Manager Documentation 
 type: Documentation
 git-repo: https://github.com/AdobeDocs/adobe-consulting-services.en
-index: y
-author: Anon
+index: true
 ---
 
 # Metadata for internal use
