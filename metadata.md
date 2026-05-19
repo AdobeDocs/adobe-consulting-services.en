@@ -4,6 +4,7 @@ solution: Experience Manager
 product_v2:
   - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
     internal-label: "Experience Manager"
+usetq: true
 description: Consulting Experience Manager Documentation 
 type: Documentation
 git-repo: https://github.com/AdobeDocs/adobe-consulting-services.en
