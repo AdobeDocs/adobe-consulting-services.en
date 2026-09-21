@@ -2,6 +2,9 @@
 title: Veeva Vault Integration Overview
 description: Veeva Vault Integration Overview
 exl-id: 52cc7290-b7e1-4476-877f-48934e6daf68
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
 ---
 # Get Started with Veeva Vault PromoMats and Adobe Experience Manager integration
 

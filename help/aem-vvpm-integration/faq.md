@@ -2,6 +2,9 @@
 title: Veeva Vault Integration FAQ
 description: Veeva Vault Integration FAQ
 exl-id: c308ebb3-7881-4094-9f35-c67a96fb5ab1
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
 ---
 # Frequently Asked Questions 
 

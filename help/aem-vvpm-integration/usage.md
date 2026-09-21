@@ -2,6 +2,9 @@
 title: Veeva Vault Integration Usage
 description: Veeva Vault Integration Usage
 exl-id: efff7af1-eb25-4a1d-b7ef-52e3336970ff
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
 ---
 # Integration Usage
 

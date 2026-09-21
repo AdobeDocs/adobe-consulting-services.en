@@ -2,6 +2,9 @@
 title: Veeva Vault Integration Notices
 description: Veeva Vault Integration Notices
 exl-id: 1a188671-d123-4475-a607-65743ba0dadd
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
 ---
 # Best practices, Guardrails, and Notices
 
